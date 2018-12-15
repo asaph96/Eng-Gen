@@ -60,6 +60,7 @@ class AcidoNucleico(MaterialGenetico):
                     pass
             return True
 
+
 class DNA(AcidoNucleico):
     _lexico = [('A', 'T', 'G', 'C'), ('W', 'S', 'M', 'K',
                                       'R', 'Y', 'B', 'D', 'H', 'V', 'N'), ]
