@@ -66,8 +66,8 @@ class DNA(AcidoNucleico):
                                       'R', 'Y', 'B', 'D', 'H', 'V', 'N'), ]
 
     def __init__(self, sequencia, degenerado=False):
-        super().__init__(sequencia, degenerado)
         self.deg = degenerado
+        super().__init__(sequencia, self.deg)        
         self.seq = sequencia
 
 
@@ -76,6 +76,6 @@ class RNA(AcidoNucleico):
                                            'R', 'Y', 'B', 'D', 'H', 'V', 'N'), ]
 
     def __init__(self, sequencia, degenerado=False):
-        super().__init__(sequencia, degenerado)
         self.deg = degenerado
+        super().__init__(sequencia, self.deg)        
         self.seq = sequencia
