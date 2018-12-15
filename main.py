@@ -25,6 +25,7 @@ class MaterialGenetico:
     def __len__(self):
         return len(self.seq)
 
+
 class Proteina(MaterialGenetico):
     _lexico = ['A', 'R', 'N', 'D', 'B', 'C', 'E', 'Q', 'Z',
                'G', 'H', 'I', 'L', 'K', 'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V']
@@ -34,9 +35,27 @@ class Proteina(MaterialGenetico):
         self.seq = sequencia
         print('Proteína criada')
 
+
 class AcidoNucleico(MaterialGenetico):
 
     def __init__(self, sequencia):
         super().__init__(sequencia)
         self.seq = sequencia
         print("Ácido nucleico criado com sucesso")
+
+
+class DNA(AcidoNucleico):
+    _lexico = [('A', 'T', 'G', 'C'), ('W', 'S', 'M', 'K',
+                                      'R', 'Y', 'B', 'D', 'H', 'V', 'N'), ]
+
+    def __init__(self, sequencia):
+        super().__init__(sequencia)
+        self.seq = sequencia
+
+class RNA(AcidoNucleico):
+    _lexico = [('A', 'U', 'G', 'C', 'I'), ('W', 'S', 'M', 'K',
+                                      'R', 'Y', 'B', 'D', 'H', 'V', 'N'), ]
+
+    def __init__(self, sequencia):
+        super().__init__(sequencia)
+        self.seq = sequencia
