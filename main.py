@@ -52,9 +52,10 @@ class DNA(AcidoNucleico):
         super().__init__(sequencia)
         self.seq = sequencia
 
+
 class RNA(AcidoNucleico):
     _lexico = [('A', 'U', 'G', 'C', 'I'), ('W', 'S', 'M', 'K',
-                                      'R', 'Y', 'B', 'D', 'H', 'V', 'N'), ]
+                                           'R', 'Y', 'B', 'D', 'H', 'V', 'N'), ]
 
     def __init__(self, sequencia):
         super().__init__(sequencia)
