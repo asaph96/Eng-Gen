@@ -65,17 +65,7 @@ class AcidoNucleico(MaterialGenetico):
         index = 1
         try:
             for nucleotideo in self.seq:
-                if nucleotideo == self._lexico[0][1]:
-                    rev_comp += self._lexico[0][0]
-                elif nucleotideo == self._lexico[0][0]:
-                    rev_comp += self._lexico[0][1]
-                elif nucleotideo == self._lexico[0][3]:
-                    rev_comp += self._lexico[0][2]
-                elif nucleotideo == self._lexico[0][2]:
-                    rev_comp += self._lexico[0][3]
-                elif nucleotideo == self._lexico[0][4]:
-                    rev_comp += '*'
-                elif nucleotideo == self._lexico[1][1]:
+                if nucleotideo == self._lexico[1][1]:
                     rev_comp += self._lexico[1][0]
                 elif nucleotideo == self._lexico[1][0]:
                     rev_comp += self._lexico[1][1]
@@ -95,10 +85,20 @@ class AcidoNucleico(MaterialGenetico):
                     rev_comp += self._lexico[1][8]
                 elif nucleotideo == self._lexico[1][8]:
                     rev_comp += self._lexico[1][9]
-                else:
+                elif nucleotideo == self._lexico[1][10]:
                     rev_comp += self._lexico[1][10]
+                elif nucleotideo == self._lexico[0][1]:
+                    rev_comp += self._lexico[0][0]
+                elif nucleotideo == self._lexico[0][0]:
+                    rev_comp += self._lexico[0][1]
+                elif nucleotideo == self._lexico[0][3]:
+                    rev_comp += self._lexico[0][2]
+                elif nucleotideo == self._lexico[0][2]:
+                    rev_comp += self._lexico[0][3]
+                elif nucleotideo == self._lexico[0][4]:
+                    rev_comp += '*'
                 index += 1
-        except IndexError:
+        except :
             print('O nucleotídeo %s da posição %i não tem par'%(nucleotideo, index,))
         finally:
             return rev_comp
