@@ -58,7 +58,7 @@ class AcidoNucleico(MaterialGenetico):
                     raise ValueError('Sequência inválida')
                 else:
                     pass
-        return True
+            return True
 
 class DNA(AcidoNucleico):
     _lexico = [('A', 'T', 'G', 'C'), ('W', 'S', 'M', 'K',
